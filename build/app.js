@@ -1,0 +1,2 @@
+var cachedModules=[];angular.module("sixtyminapp",[]).controller("sixtycontroller",["$http",function(e){var s=this;s.test="hi",s.message="",s.messages={},s.sendPost=function(){e.post("/messages",{message:s.message}).then(function(e){console.log("message saved"),s.retrieveMessages()})},s.retrieveMessages=function(){e.get("/messages").then(function(e){console.log(e.data),s.messages=e.data})},s.retrieveMessages()}]);
+//# sourceMappingURL=UGLIFY_SOURCE_MAP_TOKEN

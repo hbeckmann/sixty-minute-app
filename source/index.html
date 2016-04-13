@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html ng-app="sixtyminapp">
+  <head>
+    <meta charset="utf-8">
+    <title>60 Minute App</title>
+    <script src="angular.js"></script>
+    <script type="text/javascript" src='app.js'></script>
+
+
+  </head>
+  <body ng-controller="sixtycontroller as sixty">
+    Leave a message: <input ng-model="sixty.message"></input><button ng-click="sixty.sendPost()">Submit</button><br/>
+    Your message:     {{sixty.message}}<br/><br/>
+    <div ng-repeat="x in sixty.messages">
+    {{x.message}}
+    </div>
+  </body>
+</html>
